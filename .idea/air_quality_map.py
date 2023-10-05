@@ -53,7 +53,7 @@ def fetch_current_location():
 def fetch_air_quality_iqair():
     address = address_entry.get()
     api_url = f"https://api.iqair.com/v1/forecast/{address}"
-    api_key = "c58f03e3-9d50-47b7-9306-08808afda89c"  # Replace with your IQAir API key
+    api_key = "c58f03e3-9d50-47b7-9306-08808afda89c"  # Replace with your IQAir API key but its free so oh well...
     response = requests.get(api_url, headers={"Authorization": f"Bearer {api_key}"})
     if response.status_code == 200:
         response_data = response.json()
